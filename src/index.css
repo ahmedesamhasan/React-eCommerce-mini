@@ -1,0 +1,247 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1f2937;
+  background: #f8f9fb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8f9fb 0%, #eef2f7 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+}
+
+#root,
+.page-shell {
+  min-height: 100vh;
+}
+
+.page-shell {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell {
+  flex: 1;
+}
+
+.hero-panel {
+  background: linear-gradient(135deg, #ffffff 0%, #eef4ff 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.06);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(13, 110, 253, 0.12);
+  color: #0d6efd;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-copy {
+  max-width: 640px;
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+.stat-card,
+.feature-card,
+.toolbar-card,
+.empty-state,
+.info-box {
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1rem;
+}
+
+.stat-card,
+.feature-card,
+.info-box {
+  padding: 1rem 1.1rem;
+}
+
+.feature-card {
+  text-align: center;
+  box-shadow: 0 0.75rem 1.75rem rgba(15, 23, 42, 0.04);
+}
+
+.toolbar-card,
+.empty-state {
+  padding: 1.25rem;
+}
+
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 1rem;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.08) !important;
+}
+
+.product-image {
+  height: 220px;
+  object-fit: contain;
+  padding: 1rem;
+  background: #fff;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.details-card {
+  border-radius: 1.5rem;
+}
+
+.details-gallery-panel {
+  background: linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+}
+
+.details-main-image {
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.image-thumb-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0.75rem;
+}
+
+.image-thumb-button.active img {
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.search-box {
+  width: 100%;
+  max-width: 320px;
+}
+
+.line-clamp-1,
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.auth-page {
+  min-height: 70vh;
+}
+
+.auth-card,
+.register-card,
+.contact-card {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 1.25rem;
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cart-link {
+  min-width: 56px;
+}
+
+.footer-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-link:hover {
+  color: #0d6efd;
+}
+
+.toast-stack {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1080;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.app-toast {
+  min-width: 240px;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  color: #fff;
+  box-shadow: 0 0.75rem 1.5rem rgba(15, 23, 42, 0.16);
+}
+
+.app-toast-dark {
+  background: #212529;
+}
+
+.app-toast-success {
+  background: #198754;
+}
+
+.app-toast-danger {
+  background: #dc3545;
+}
+
+@media (max-width: 576px) {
+  .product-image {
+    height: 180px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toast-stack {
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .app-toast {
+    max-width: none;
+  }
+}
