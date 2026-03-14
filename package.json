@@ -2,7 +2,7 @@
   "name": "lab3",
   "private": true,
   "version": "0.0.0",
-"homepage": "https://ahmedesamhasan.github.io/frontend-books-ecommerce",
+  "homepage": "https://ahmedesamhasan.github.io/React-eCommerce-mini",
   "type": "module",
   "scripts": {
     "dev": "vite",
